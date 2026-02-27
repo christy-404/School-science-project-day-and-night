@@ -20,14 +20,14 @@ document.addEventListener('DOMContentLoaded', () => {
     // High-quality background (Milky Way stars) with error logging
     const backgroundLoader = new THREE.TextureLoader();
     backgroundLoader.load(
-        './textures/2k_stars_milky_way.jpg',
+        '2k_stars_milky_way.jpg',
         (texture) => {
             texture.mapping = THREE.EquirectangularReflectionMapping;
             scene.background = texture;
             console.log('Background loaded successfully');
         },
         undefined,
-        (err) => console.error('Failed to load background ./textures/2k_stars_milky_way.jpg:', err)
+        (err) => console.error('Failed to load background 2k_stars_milky_way.jpg:', err)
     );
 
     // Ambient light for subtle visibility
@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const sunLoader = new THREE.TextureLoader();
     const sunMaterial = new THREE.MeshBasicMaterial({ color: 0xffff00 }); // Fallback yellow
     sunLoader.load(
-        './textures/2k_sun.jpg',
+        '2k_sun.jpg',
         (texture) => {
             sunMaterial.map = texture;
             sunMaterial.needsUpdate = true;
@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
             distance: 0.387 * auScale,
             orbitalPeriod: 0.241,
             rotationPeriod: 1407.6,
-            texture: './textures/2k_mercury.jpg',
+            texture: '2k_mercury.jpg',
             normalMap: null,
             diameter: '4,879 km',
             distSun: '0.39 AU',
@@ -98,8 +98,8 @@ document.addEventListener('DOMContentLoaded', () => {
             distance: 0.723 * auScale,
             orbitalPeriod: 0.615,
             rotationPeriod: -5832.5,
-            texture: './textures/2k_venus_surface.jpg',        // surface
-            normalMap: './textures/2k_venus_atmosphere.jpg',   // atmosphere
+            texture: '2k_venus_surface.jpg',        // surface
+            normalMap: '2k_venus_atmosphere.jpg',   // atmosphere
             diameter: '12,104 km',
             distSun: '0.72 AU',
             orbPeriod: '225 days',
@@ -115,10 +115,10 @@ document.addEventListener('DOMContentLoaded', () => {
             distance: 1 * auScale,
             orbitalPeriod: 1,
             rotationPeriod: 23.93,
-            texture: './textures/2k_earth_daymap.jpg',
-            cloudsTexture: './textures/2k_earth_clouds.jpg',
-            normalMap: './textures/2k_earth_normal_map.jpg',
-            specularMap: './textures/2k_earth_specular_map.jpg',
+            texture: '2k_earth_daymap.jpg',
+            cloudsTexture: '2k_earth_clouds.jpg',
+            normalMap: '2k_earth_normal_map.jpg',
+            specularMap: '2k_earth_specular_map.jpg',
             tilt: 23.44,
             diameter: '12,756 km',
             distSun: '1 AU',
@@ -135,7 +135,7 @@ document.addEventListener('DOMContentLoaded', () => {
             distance: 1.524 * auScale,
             orbitalPeriod: 1.881,
             rotationPeriod: 24.62,
-            texture: './textures/2k_mars.jpg',
+            texture: '2k_mars.jpg',
             normalMap: null,
             diameter: '6,792 km',
             distSun: '1.52 AU',
@@ -152,7 +152,7 @@ document.addEventListener('DOMContentLoaded', () => {
             distance: 5.204 * auScale,
             orbitalPeriod: 11.862,
             rotationPeriod: 9.93,
-            texture: './textures/2k_jupiter.jpg',
+            texture: '2k_jupiter.jpg',
             normalMap: null,
             diameter: '142,984 km',
             distSun: '5.2 AU',
@@ -169,9 +169,9 @@ document.addEventListener('DOMContentLoaded', () => {
             distance: 9.582 * auScale,
             orbitalPeriod: 29.457,
             rotationPeriod: 10.66,
-            texture: './textures/2k_saturn.jpg',
+            texture: '2k_saturn.jpg',
             normalMap: null,
-            ringTexture: './textures/2k_saturn_ring_alpha.png',
+            ringTexture: '2k_saturn_ring_alpha.png',
             diameter: '120,536 km',
             distSun: '9.58 AU',
             orbPeriod: '29 years',
@@ -187,7 +187,7 @@ document.addEventListener('DOMContentLoaded', () => {
             distance: 19.191 * auScale,
             orbitalPeriod: 84.020,
             rotationPeriod: -17.24,
-            texture: './textures/2k_uranus.jpg',
+            texture: '2k_uranus.jpg',
             normalMap: null,
             diameter: '51,118 km',
             distSun: '19.2 AU',
@@ -204,7 +204,7 @@ document.addEventListener('DOMContentLoaded', () => {
             distance: 30.047 * auScale,
             orbitalPeriod: 164.8,
             rotationPeriod: 16.11,
-            texture: './textures/2k_neptune.jpg',
+            texture: '2k_neptune.jpg',
             normalMap: null,
             diameter: '49,528 km',
             distSun: '30 AU',
@@ -289,7 +289,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const moonDistance = 3; // Scaled, real is ~30 Earth radii
     const moonGeometry = new THREE.SphereGeometry(moonRadius, 32, 32);
     const moonMaterial = new THREE.MeshStandardMaterial({ color: 0xaaaaaa });
-    loader.load('./textures/2k_moon.jpg', (tex) => { moonMaterial.map = tex; moonMaterial.needsUpdate = true; console.log('Moon loaded'); });
+    loader.load('2k_moon.jpg', (tex) => { moonMaterial.map = tex; moonMaterial.needsUpdate = true; console.log('Moon loaded'); });
     const moon = new THREE.Mesh(moonGeometry, moonMaterial);
     moon.castShadow = true;
     moon.receiveShadow = true;

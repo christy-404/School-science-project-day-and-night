@@ -1,0 +1,149 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Project: Day vs Night</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: white;
+            background-color: black;
+            overflow-x: hidden;
+            position: relative;
+        }
+        #hero {
+            height: 100vh;
+            background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images-assets.nasa.gov/image/PIA18033/PIA18033~orig.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        #hero h1 {
+            font-size: 5em;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        #hero h2 {
+            font-size: 2.5em;
+            margin: 0;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+        details {
+            margin: 30px auto;
+            max-width: 1200px;
+            padding: 15px;
+            background-color: rgba(255,255,255,0.05);
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        summary {
+            cursor: pointer;
+            font-size: 2em;
+            font-weight: bold;
+            padding: 10px;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+        }
+        button {
+            display: block;
+            margin: 20px auto;
+            padding: 15px 30px;
+            font-size: 1.5em;
+            background-color: #ffffff;
+            color: #000000;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #cccccc;
+        }
+        #solar-credit {
+            text-align: center;
+            font-size: 0.9em;
+            margin: -10px auto 20px;
+            max-width: 800px;
+            color: #cccccc;
+        }
+        #solar-credit a {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+        #ai-aid {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            font-size: 0.6em;
+            color: rgba(255,255,255,0.3); /* Very faint */
+        }
+    </style>
+</head>
+<body>
+    <div id="hero">
+        <h1>School Project: Day vs Night</h1>
+        <h2>Understanding Earth's Rotation Through Interactive Simulation</h2>
+    </div>
+    <details>
+        <summary>THEORY OF THIS PROJECT</summary>
+        <p>The Earth spins around an imaginary line called its axis. This spinning motion is called rotation. The Earth takes about 24 hours to complete one full rotation.</p>
+        <p>Day and night happen because of this rotation.</p>
+        <p>At any moment, only one half of the Earth faces the Sun and receives sunlight. That side experiences day. The other half, which is turned away from the Sun, remains in darkness and experiences night.</p>
+        <p>As the Earth keeps rotating:</p>
+        <ul>
+            <li>Places move into sunlight → Sunrise</li>
+            <li>Stay in light → Daytime</li>
+            <li>Move out of sunlight → Sunset</li>
+            <li>Stay in darkness → Night</li>
+        </ul>
+        <p>The line that separates day and night is called the terminator line. This line keeps moving as the Earth rotates.</p>
+        <p>The Earth is slightly tilted (about 23.5°). This tilt does not cause day and night, but it is the reason we have different seasons.</p>
+        <p>In this project:</p>
+        <ul>
+            <li>The globe represents the Earth.</li>
+            <li>The light source represents the Sun.</li>
+            <li>The motor makes the globe rotate like the real Earth.</li>
+            <li>The bright side shows day.</li>
+            <li>The dark side shows night.</li>
+        </ul>
+        <p>This model helps us clearly see how the Earth’s rotation causes day and night.</p>
+    </details>
+    <details>
+        <summary>MATERIALS USED IN THE PHYSICAL PROJECT</summary>
+        <ol>
+            <li>Globe – Represents the Earth and shows continents and oceans.</li>
+            <li>DC Geared Motor – Rotates the globe slowly to show Earth’s rotation.</li>
+            <li>Axis Rod – Holds the globe and allows it to spin properly.</li>
+            <li>Light Source – Represents the Sun.</li>
+            <li>Cardboard Box – Holds all parts in place and blocks outside light.</li>
+            <li>Wires – Connect the electrical components.</li>
+            <li>Switch – Turns the model on and off.</li>
+            <li>Batteries and Battery Holder – Provide power to the motor and light.</li>
+        </ol>
+    </details>
+    <details>
+        <summary>CREDITS AND REFERENCES</summary>
+        <p>Textures and models sourced from:</p>
+        <ul>
+            <li>Solar System Scope (<a href="https://www.solarsystemscope.com/textures/" target="_blank">https://www.solarsystemscope.com/textures/</a>) for planet textures, rings, and backgrounds.</li>
+            <li>NASA (<a href="https://images.nasa.gov/" target="_blank">https://images.nasa.gov/</a>) for hero background image (PIA18033).</li>
+        </ul>
+        <p>3D rendering powered by:</p>
+        <ul>
+            <li>Three.js (<a href="https://threejs.org/" target="_blank">https://threejs.org/</a>) for interactive simulation.</li>
+        </ul>
+        <p>Solar system embed from Solar System Scope (<a href="https://www.solarsystemscope.com/" target="_blank">https://www.solarsystemscope.com/</a>).</p>
+        <p>Scientific data and facts referenced from NASA and other educational sources.</p>
+    </details>
+    <button onclick="window.open('interactive.html', '_blank')">Launch Day-Night Interactive Model</button>
+    <button onclick="window.open('solar.html', '_blank')">Launch Interactive Solar System</button>
+    <p id="solar-credit">The interactive Solar System above is developed by Solar System Scope.<br>It is embedded here for educational purposes.<br>We thank them for providing this amazing learning tool.<br>Learn more at: <a href="https://www.solarsystemscope.com/" target="_blank">https://www.solarsystemscope.com/</a></p>
+    <p id="ai-aid">This site was aided with AI</p>
+</body>
+</html>

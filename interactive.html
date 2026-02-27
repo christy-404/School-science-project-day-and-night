@@ -1,0 +1,81 @@
+<!-- interactive.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day-Night Interactive Model</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-color: black;
+        }
+        #container {
+            width: 100vw;
+            height: 100vh;
+        }
+        #controls {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(0,0,0,0.7);
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+            z-index: 10;
+            color: white;
+        }
+        #controls label {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+        #info {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0,0,0,0.8);
+            padding: 20px;
+            border-radius: 10px;
+            display: none;
+            text-align: center;
+            max-width: 400px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            z-index: 10;
+            color: white;
+        }
+        #info h3 {
+            margin: 0 0 10px;
+            font-size: 1.8em;
+        }
+        #info p {
+            margin: 5px 0;
+        }
+        #modeToggle {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: rgba(0,0,0,0.7);
+            padding: 10px;
+            border-radius: 5px;
+            z-index: 10;
+            color: white;
+            font-size: 1.2em;
+        }
+    </style>
+    <script src="https://unpkg.com/three@0.134.0/build/three.min.js"></script>
+    <script src="https://unpkg.com/three@0.134.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="interact.js"></script>
+</head>
+<body>
+    <div id="container"></div>
+    <div id="controls">
+        <label>Time Speed: <input type="range" min="0" max="20" value="1" step="0.1" id="speedSlider"></label>
+        <label>Pause: <input type="checkbox" id="pauseCheckbox"></label>
+    </div>
+    <label id="modeToggle">Day-Night View: <input type="checkbox" id="earthModeToggle" checked></label>
+    <div id="info"></div>
+</body>
+</html>

@@ -117,8 +117,8 @@ document.addEventListener('DOMContentLoaded', () => {
             rotationPeriod: 23.93,
             texture: './textures/2k_earth_daymap.jpg',
             cloudsTexture: './textures/2k_earth_clouds.jpg',
-            normalMap: './textures/2k_earth_normal_map.tif',
-            specularMap: './textures/2k_earth_specular_map.tif',
+            normalMap: './textures/2k_earth_normal_map.jpg',
+            specularMap: './textures/2k_earth_specular_map.jpg',
             tilt: 23.44,
             diameter: '12,756 km',
             distSun: '1 AU',
@@ -467,7 +467,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (p.clouds) p.clouds.rotation.y += delta * timeSpeed * (2 * Math.PI / p.data.rotationPeriod) / 15;
             });
 
-            moonAngle += delta * timeSpeed * (2 * Math.PI / moonOrbitalPeriod) / 60;
+            moonAngle += delta * timeSpeed * (2 * Math.PI / moonOrbitalPeriod) / 120; // Slower moon orbit
             moon.position.set(moonDistance * Math.cos(moonAngle), 0, moonDistance * Math.sin(moonAngle));
 
             // Subtle Kuiper Belt rotation
